@@ -1,0 +1,31 @@
+
+
+//User function Template for Java
+
+class Solution
+{
+    static void solve(int a[],String str[],ArrayList<String> list, int i,String s)
+    {
+        if(i==a.length)
+        {
+            list.add(s);
+            return;
+        }
+        String tem=str[a[i]];
+        for(int j=0;j<tem.length();j++)
+        {
+            char ch= tem.charAt(j);
+            solve(a,str,list,i+1,s+ch);
+        }
+    }
+    //Function to find list of all words possible by pressing given numbers.
+    static ArrayList <String> possibleWords(int a[], int N)
+    {
+        // your code here  
+        String[]str={"","","abc","def","ghi","jkl","mno","pqrs","tuv","wxyz"};
+        ArrayList<String> list=new ArrayList<>();
+        solve(a,str,list,0,"");
+        return list;
+    }
+    
+}
