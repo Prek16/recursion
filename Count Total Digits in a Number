@@ -1,0 +1,19 @@
+
+
+//User function Template for Java
+
+class Solution
+{
+    // complete the below function
+    public static int countDigits(int n)
+    {
+        // add your code here
+        int c=0;
+        while(n!=0)
+        {
+            n=n/10;
+            ++c;
+        }
+        return c;
+    }
+}
