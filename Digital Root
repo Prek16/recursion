@@ -1,0 +1,27 @@
+
+
+//User function Template for Java
+
+class Solution
+{
+    // complete the function
+    public static int digitalRoot(int n)
+    {
+        // add your code here
+       int sum=0;
+       if(n/10==0){
+           return n;
+       }
+       else{
+            sum=add(n);
+            return digitalRoot(sum);
+       }
+    }
+    public static int add(int n){
+        int s=n%10;
+        if(n/10>0)
+            return s+add(n/10);
+        else
+            return n;
+    }
+}
